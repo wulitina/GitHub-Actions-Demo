@@ -25,7 +25,7 @@ jobs:
       run: ./gradlew clean build jar
 
     - name: Debug Build Output
-      run: ls -R build/libs
+      run: ls -lah build/libs/
 
     - name: Ensure Build Directory Exists
       run: mkdir -p build/libs && touch build/libs/dummy.jar
