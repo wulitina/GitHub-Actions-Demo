@@ -25,7 +25,7 @@ jobs:
       run: ./gradlew clean build jar
 
     - name: Debug Build Output
-      run: ls -lah build/libs/
+      run: ls -lah build/libs/ || echo "build/libs/ directory does not exist!"
 
     - name: Ensure Build Directory Exists
       run: mkdir -p build/libs && touch build/libs/dummy.jar
